@@ -2,10 +2,9 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { Component } from 'react';
 
-// eslint-disable-next-line react/prefer-stateless-function
 class Flat extends Component {
   handleClick = () => {
-    const { lat, lng } = this.props.flatData;
+    const { lat, lng } = this.props;
     const { updateFlatMarker } = this.props;
     updateFlatMarker(lat, lng);
   }
@@ -13,7 +12,7 @@ class Flat extends Component {
   render() {
     const {
       name, imageUrl, price, priceCurrency
-    } = this.props.flatData;
+    } = this.props;
     return (
       <div className="card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${imageUrl})` }}>
         <div className="card-category">

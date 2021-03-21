@@ -15,7 +15,7 @@ class ReactMap extends Component {
   };
 
   render() {
-    const { lat, lng } = this.props.flatLoc;
+    const { lat, lng } = this.props;
     return (
       <div className="map-container">
         <div style={{ height: '100vh', width: '100%' }}>

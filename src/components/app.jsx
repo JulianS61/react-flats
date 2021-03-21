@@ -23,7 +23,7 @@ class App extends Component {
     return (
       <div>
         <FlatList flatsData={flats} updateFlatMarker={this.updateFlatMarker} />
-        <ReactMap flatLoc={flatLoc} />
+        <ReactMap {...flatLoc} />
       </div>
     );
   }

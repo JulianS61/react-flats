@@ -9,7 +9,7 @@ class FlatList extends Component {
       <div className="flat-list">
         {flatsData.map(flat => (
           <Flat
-            flatData={flat}
+            {...flat}
             key={flat.name}
             updateFlatMarker={updateFlatMarker}
           />
