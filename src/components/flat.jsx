@@ -4,17 +4,19 @@ import React, { Component } from 'react';
 
 class Flat extends Component {
   handleClick = () => {
-    const { lat, lng } = this.props;
-    const { updateFlatMarker } = this.props;
+    const {
+      name, lat, lng, updateFlatMarker, changeActiveElement
+    } = this.props;
     updateFlatMarker(lat, lng);
+    changeActiveElement(name);
   }
 
   render() {
     const {
-      name, imageUrl, price, priceCurrency
+      name, imageUrl, price, priceCurrency, active
     } = this.props;
     return (
-      <div className="card" style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${imageUrl})` }}>
+      <div className={`card${active ? ' active' : ''}`} style={{ backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2)), url(${imageUrl})` }}>
         <div className="card-category">
           {price}
           {' '}
